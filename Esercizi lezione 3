@@ -1,0 +1,761 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "458ccfde-8e24-4591-9c5d-cb6d423659f3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Abbiamo una lista di liste: mat = [[0, 1, 2, 3, 4], [5, 6, 7, 8, 9], [10, 11, 12, 13, 14]] \n",
+    "#Che tipo di struttura dati o matematica potrebbe rappresentare? Notare che tutte le liste \n",
+    "#\"interne\" sono della stessa dimensione"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "aabdfb39-420b-4fa6-b8d1-e7e2f56d1ea4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import math"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "a62b0caa-8c9a-4a69-80be-833ce8d351be",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    " mat = [[0, 1, 2, 3, 4], [5, 6, 7, 8, 9], [10, 11, 12, 13, 14]] "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "5fd5c71a-62a2-4cb2-a2b7-17de4f1013dc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mat_array = np.array(mat)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "698613f7-6159-48b0-8541-4b6bc1681e3f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[ 0,  1,  2,  3,  4],\n",
+       "       [ 5,  6,  7,  8,  9],\n",
+       "       [10, 11, 12, 13, 14]])"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mat_array"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "1cd0bcaa-91b1-4ce0-b222-4c912d98581c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(3, 5)"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mat_array.shape"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "422d6f88-d0fc-493a-aab7-85600ff3a28a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([0, 1, 2, 3, 4])"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mat_array[0,:]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f0ca70c4-016e-43ff-aa4f-15d802b0a31c",
+   "metadata": {},
+   "source": [
+    "mat_array[-2 , :]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "5c7a3cf1-ed9f-4ef7-9ba7-080cbe2b02ac",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "7"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mat_array[1,2]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "a6cdd98c-50a8-42cb-84af-6793b67317cc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = math.sin(15)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "922d0815-0e34-4e7b-8361-b714e206d3b3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.6502878401571168"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "41ede883-38f3-413e-8318-94705f947bbc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Importiamo il modulo math e proviamo a usare \n",
+    "#le funzioni .sin() .cos() .factorial() e \n",
+    "#la variabile .pi la riconoscete?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ffc37428-430a-4d76-ba0e-be74fe32693c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print( *SIN di 90°, math.sin(90) *COS di 90°, math.cos(90), ( *SIN di 180°, math.sin(180) *COS di 180°, math.cos(180)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5df25041-c05b-463e-b6ab-50b2148b847e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Proviamo a eseguire math.degrees(math.pi)\n",
+    "#Qual è e cosa significa il risultato? Per saperne di più su questa funzione possiamo usare help(math.degrees)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "cad1165c-e142-4b0b-9589-eb9730d1821c",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid character '°' (U+00B0) (3386702267.py, line 1)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;36m  Cell \u001b[1;32mIn[15], line 1\u001b[1;36m\u001b[0m\n\u001b[1;33m    print( *SIN di 90°, math.sin(math.pi/2) *COS di 90°, math.cos(math.pi/2), ( *SIN di 180°, math.sin(math.pi) *COS di 180°, math.cos(math.pi)\u001b[0m\n\u001b[1;37m                     ^\u001b[0m\n\u001b[1;31mSyntaxError\u001b[0m\u001b[1;31m:\u001b[0m invalid character '°' (U+00B0)\n"
+     ]
+    }
+   ],
+   "source": [
+    "print( *SIN di 90°, math.sin(math.pi/2) *COS di 90°, math.cos(math.pi/2), ( *SIN di 180°, math.sin(math.pi) *COS di 180°, math.cos(math.pi)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "66444843-a36f-43e6-adde-f1f5b4f5aa08",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "362880\n"
+     ]
+    }
+   ],
+   "source": [
+    "#print(math.factorial(9))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "50dedf76-4fb5-4df1-902c-2e5b48499fca",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "lst = [2000, 5500, 7200, 4320, 1280, 1900, 2500, 3900, 6410, 8150, 7100, 5350]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "516e47e6-2084-46f6-8d80-a1b05d010b9a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "lst = np.array(lst)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "921f8d3a-3d6c-450b-9637-315ec212bdd3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#qual è stata la vendita massima mensile?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "b0de6ce6-ba17-45e6-9aca-d3a00e51dc5d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "8150\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(lst.max())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "add60d23-8e27-434c-866b-ef2bca9cfa4d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#qual è stata la vendita minima mensile?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "ea9e6c1a-2691-4151-b9ba-be44140c9d3f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1280\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(lst.min())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c01a963a-3297-4161-bdf2-863b7b6776f3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#quali sono le vendite mensili maggiori di 4999 oggetti? "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "69406254-f5b4-4c06-952f-dd453e40a9ed",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "filter = lst[lst > 4999]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "ad3f86bd-b5f2-46be-b9b6-5ae54a2da265",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[5500 7200 6410 8150 7100 5350]\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(filter)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "eefee7d8-e66f-4ae2-b405-70d6e9e2428d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#E quante ne sono?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "6fcca351-13be-4ad8-a18b-e35be11af336",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Quanti sono: 6\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Quanti sono:\", len(filter))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8a5c48f6-39fb-41ed-a8c6-95254c4e479f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#quali sono le vendite minori di 3000 oggetti?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "d5e284b4-b2d4-40ff-a94e-0c1772ea8328",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "filter_3000 = lst[lst < 3000]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "6053262e-514d-4b3d-86f8-7083ac4b67f5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[2000 1280 1900 2500]\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(filter_3000)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4d57a11f-e62c-48b3-b0e2-89c482ad6472",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#quali sono le vendite minori di 3000 oggetti?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "6339c57e-99e0-45ff-9640-6f5e857dad8d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Quanti sono: 4\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Quanti sono:\", len(filter_3000))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "66eb1fba-6d2a-44b9-8180-66ba71a8e285",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# E qual'è la media?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "34480a2a-b952-44f5-bc64-f14b06b3decb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"media al mese arrotondata a 2 cifre\", round(lst.mean(),2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "fd6dda44-42ab-49e2-a0e4-1318ee0daf07",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Consideriamo il seguente dizionario: fatturati_dict = {1997: 12_000, 1998: 15_000, 1999: 20_000, 2000: 23_000, 2001: 25_000, 2002: 17_000, 2003: 14_000, 2004: 21_000}\n",
+    "#Consideriamo ora la seguente Series: fatturati_series = pd.Series([12_000, 15_000, 20_000, 23_000, 25_000, 17_000, 14_000, 21_000],\n",
+    "#index=range(1997, 2005)) Possiamo accedere alle stesse informazioni nello stesso modo: fatturati_dict[1997] fatturati_series[1997]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "94a436c0-d11f-43e8-9f8e-e5bb09d56c11",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "fatturati_dict = {1997: 12_000, 1998: 15_000, 1999: 20_000, 2000: 23_000, 2001: 25_000, 2002: 17_000, 2003: 14_000, 2004: 21_000}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "efb0c4d5-4806-42d7-952e-510e55d83954",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    " fatturati_series = pd.Series([12_000, 15_000, 20_000, 23_000, 25_000, 17_000, 14_000, 21_000], index=range(1997, 2005))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "41387c84-f987-4fc1-8b20-d76a81efa3ff",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Dunque qual è la differenza tra i due tipi di dato?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "80bb37e3-dc56-49d9-992c-0475c0541357",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#accesso tramite chiave x restitusce y {x,y}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "dc21bf0c-028b-4b2a-9231-8bbe287ed6ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "tipo di valore del dizionario <class 'int'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"tipo di valore del dizionario\", type (fatturati_dict[1997]))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "id": "e2c3b80a-7e17-4aad-8c53-0d39fd04cd43",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "tipo di valore del series <class 'numpy.int64'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"tipo di valore del series\", type (fatturati_series[1997]))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "id": "f11b2a9e-ec66-40ff-b987-0f7d005b824f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "massimo delle serie 25000\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"massimo delle serie\", fatturati_series.max())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "id": "e5d28724-51b2-4482-a6e3-63716026a95b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Between\n",
+      "* 1997    False\n",
+      "1998     True\n",
+      "1999     True\n",
+      "2000    False\n",
+      "2001    False\n",
+      "2002     True\n",
+      "2003    False\n",
+      "2004    False\n",
+      "dtype: bool\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Between\\n*\", fatturati_series.between(15_000, 20_000))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "id": "6e2cf4ab-c402-453b-ab2b-8c8a9b12af34",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np \n",
+    "stipendi = np.array( [100, 200, 300, 400, 500,  600, 700, 800, 900, 1000] )"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "id": "8e32b77e-0f04-4ee9-81b2-df537c3f4326",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[ 100  200  300  400  500  600  700  800  900 1000]\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(stipendi)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1f6f507d-10b6-4308-b361-f723b4c0b21c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#L'azienda ci chiede di raddoppiare tutti gli stipendi; facciamolo in due modi:\n",
+    "# con un ciclo for"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "082eb764-fad9-4e81-87ed-dbbc392155b7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "lista_stipendi = []"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "id": "9a0d8b6d-a277-4a18-8cf7-5cb44f4e8e58",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "lista_stipendi_raddoppiati = []\n",
+    "lista_stipendi_raddoppiati_com = []"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "id": "a4302f33-48f6-4d82-bf59-1facc4903162",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "200\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(stipendi[1])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "08862499-54af-46a1-9da6-f6f7e2615066",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "for stipendio in stipendi:\n",
+    "lista_stipendi.append(stipendio*2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "id": "b0028424-df37-47d7-8b34-5216b47695a3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[]\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(lista_stipendi)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "id": "18474970-4469-4570-8cf9-94a6017fe133",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "lista_stipendi_raddoppiati_com = [ stipendio*2 for stipendio in stipendi]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "11849367-f2a0-48e4-ae28-c47df74d98e9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"lista stipindi raddopiati\", lista_stipendi_raddopiati)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "55435a39-9849-4b0c-8753-b76b8a705402",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
